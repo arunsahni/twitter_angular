@@ -5,8 +5,8 @@ const app = express();
 const client = new Twitter({
   consumer_key: '7oruLycyUI3M2H9rb9VSRIhTx',
   consumer_secret: 'Da5bh55uiQpmt8QpMGXsnaqcxauZiBIeSt63tY2Y0sDKdxsj4B',
-  access_token: 'ACCESS_TOKEN',
-  access_token_secret: 'ACCESS_TOKEN_SECRET'
+  access_token: '1338290707-J0GkDNEQBCQkglTdCGKZ1RwpmIUxSntRi8LPdBQ',
+  access_token_secret: '1DlpU9CCWIy37cVMBpDzgAPqkuN9SthJI2fEexSaqOqqV'
 });
 
 app.use(require('cors')());
