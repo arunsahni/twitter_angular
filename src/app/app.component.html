@@ -2,8 +2,17 @@
   <clr-header class="header-4">
     <div class="branding">
       <a class="nav-link">
-        <div class="title">Twangular</div>
+        <div class="title">Twitter app</div>
       </a>
+    </div>
+    <div class="user-suggestion-box">
+      <input type="text" placeholder="Enter text" [(ngModel)]="username" (keyup)="searchUser()" >
+      <div *ngIf="username && suggestedUsers.length" class="user-list">
+        <div *ngFor="let user of suggestedUsers" class="user-detail">
+          <img [src]="user.profile_image_url">
+          <span>{{user.screen_name}}</span>
+        </div>
+      </div>
     </div>
     <div class="header-actions" *ngIf="user">
       <a class="nav-link">

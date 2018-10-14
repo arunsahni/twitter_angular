@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ClarityModule } from '@clr/angular';
 import { MomentModule } from 'angular2-moment';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TweetComponent } from './tweet/tweet.component';
@@ -15,7 +16,7 @@ import { TweetPipe } from './tweet.pipe';
     AppComponent,
     TweetComponent,
     TweetsComponent,
-    TweetPipe,
+    TweetPipe
   ],
   imports: [
     BrowserModule,
@@ -23,6 +24,7 @@ import { TweetPipe } from './tweet.pipe';
     BrowserAnimationsModule,
     ClarityModule,
     MomentModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

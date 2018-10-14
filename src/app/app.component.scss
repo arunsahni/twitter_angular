@@ -8,3 +8,43 @@
     line-height: 60px;
   }
 }
+.user-suggestion-box{
+  position: relative;
+  width: 250px;
+  input{
+    color: #fff;
+    width: 100%;
+    margin: 10px 0px;
+  }
+  button:hover{
+    background: #000;
+    color: #fff;
+  }
+  .user-list{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    background: gainsboro;
+    color: #000;
+    border: 1px solid #006a91;
+    z-index: 1;
+    .user-detail{
+      padding: 5px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.31);
+      cursor: pointer;
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      span{
+        padding: 0 10px;
+      }
+    }
+    .user-detail:hover{
+      color: #fff;
+      background: #006a91;  
+    }
+  }
+}

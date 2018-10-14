@@ -20,8 +20,12 @@ export class TwitterService {
   home(since?: string) {
     return this.http.get<TwitterResponse>(`${environment.api}/home?since=${since}`);
   }
-
+  
   action(property: 'favorite'|'retweet', id: string, state: boolean) {
     return this.http.post<TwitterResponse>(`${environment.api}/${property}/${id}`, {state});
+  }
+
+  search(userName){
+    return this.http.get<TwitterResponse>(`${environment.api}/search/${userName}`);
   }
 }

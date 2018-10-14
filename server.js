@@ -2,6 +2,7 @@ const express = require('express');
 const Twitter = require('twit');
 
 const app = express();
+
 const client = new Twitter({
   consumer_key: '7oruLycyUI3M2H9rb9VSRIhTx',
   consumer_secret: 'Da5bh55uiQpmt8QpMGXsnaqcxauZiBIeSt63tY2Y0sDKdxsj4B',
@@ -60,5 +61,12 @@ app.post('/api/retweet/:id', (req, res) => {
     .then(tweet => res.send(tweet))
     .catch(error => res.send(error));
 });
+
+app.get('/api/search/:user_name', (req,res) => {
+  client
+    .get('/users/search', {q: req.params.user_name})
+    .then(tweet => res.send(tweet))
+    .catch(error => res.send(error))
+})
 
 app.listen(3000, () => console.log('Server running'));
